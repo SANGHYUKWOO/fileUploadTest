@@ -20,4 +20,8 @@
 		insert into insert_temp (mem_seq) value ${id}
 	</insert>
 	
+	<delete id="deleteTest" parameterType="memberVO">
+		TRUNCATE table insert_temp
+	</delete>
+	
 </mapper>

@@ -19,6 +19,8 @@ public class InsertTestDAOImpl implements InsertTestDAO {
 	
 	@Override
 	public int InsertTest(String param) throws Exception {
+		
+		sqlSession.delete(Namespace+".deleteTest");
 		param = param.replaceAll("\\[", "(");
 		param = param.replaceAll("\\]", ")");
 		param = param.replaceAll(",", "),(");
